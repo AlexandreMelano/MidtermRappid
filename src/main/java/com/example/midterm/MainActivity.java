@@ -59,28 +59,42 @@ public class MainActivity extends AppCompatActivity {
 
     public void PlayButton(View view) {
 
+        //strings
         String firstName = editTextFirstName.getText().toString().trim();
         String lastName = editTextLastName.getText().toString().trim();
-
         String choice = spinnerChoice.getSelectedItem().toString();
+        //String androidChoice = null;
+
+        //others
         textViewAndroidChoices.setText(choice);
         Boolean winner = false;
+
+
 
         final Random rand = new Random();
         int randInt = rand.nextInt(100)+1;
 
         if (randInt < 34){
             spinnerChoice.equals("Rock");
+            //androidChoice = "Rock";
             winner.equals(false);
         }
         if (randInt > 33 & randInt < 67){
             spinnerChoice.equals("Paper");
+            //androidChoice = "Paper";
             winner.equals(true);
         }
         if (randInt > 66){
             spinnerChoice.equals("Scissors");
+            //androidChoice = "Scissors";
             winner.equals(true);
         }
+
+        //tried adding ability to determine winner
+        //if(spinnerChoice.getSelectedItem().toString().equals("Scissors") & androidChoice = "Rock"){
+
+
+        //}
 
         //if to determine winner>
         //if (spinnerChoice.getSelectedItem().toString().equals(""))
